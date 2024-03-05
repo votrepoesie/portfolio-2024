@@ -1,0 +1,67 @@
+:root {
+    --main-color: #D6BDFF;
+    --secondary-color: #75FFEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: black;
+}
+
+header {
+    border-bottom: 1px solid var(--main-color);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+    gap: 0;
+}
+
+.nav-branding {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 40px;
+}
+
+.nav-item > a {
+    transition: 0.3s ease;
+    color: var(--main-color);
+}
+
+.nav-item > a:hover {
+    color: var(--secondary-color);
+}
+
+.hamburger {
+    display: none;
+}
+
+
+

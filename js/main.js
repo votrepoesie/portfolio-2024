@@ -18,11 +18,11 @@ document.querySelectorAll('.nav-item').forEach((item) => {
 ////////////////////////////////////////////////////
 
 function changeHamburgerContent() {
-    let screenWidth = window.innerWidth;
-    let draw = document.querySelector('.draw a');
-    let design = document.querySelector('.design a');
-    let code = document.querySelector('.code a');
-    let make = document.querySelector('.make a');
+    const screenWidth = window.innerWidth;
+    const draw = document.querySelector('.draw a');
+    const design = document.querySelector('.design a');
+    const code = document.querySelector('.code a');
+    const make = document.querySelector('.make a');
 
     if (screenWidth <= 768) {
         draw.textContent = 'draw';
@@ -46,7 +46,7 @@ window.addEventListener('resize', changeHamburgerContent);
 ////////////////////////////////////////////////////
 
 function changeHeroTextColor() {
-    let target = document.querySelector('#hero-text');
+    const target = document.querySelector('#hero-text');
     target.style.color = "rgb("+(Math.random()*255)+", 180, 230)";
     target.style.transition = "0.3s";
     setTimeout(changeHeroTextColor, 500);
@@ -55,4 +55,29 @@ function changeHeroTextColor() {
 // changeHeroTextColor();
 
 ////////////////////////////////////////////////////
+
+// not this taking me 3 full hours ... over a simple bug
+const blob1 = document.getElementById('blob-1');
+const blob2 = document.getElementById('blob-2');
+const blob3 = document.getElementById('blob-3');
+const blob4 = document.getElementById('blob-4');
+const blob5 = document.getElementById('blob-5');
+const blob6 = document.getElementById('blob-6');
+
+anime({
+    targets: blob1,
+    d:[
+        // { value: blob1.getAttribute('d') }, this is the culprit
+        { value: blob2.getAttribute('d') },
+        { value: blob3.getAttribute('d') },
+        { value: blob4.getAttribute('d') },
+        { value: blob5.getAttribute('d') },
+        { value: blob1.getAttribute('d') }
+    ],
+    duration: 5000, 
+    easing: 'easeInOutQuad', 
+    loop: true
+  });
+
+  ////////////////////////////////////////////////////
 

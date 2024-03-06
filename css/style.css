@@ -1,6 +1,7 @@
 :root {
     --main-color: #D6BDFF;
     --secondary-color: #75FFEE;
+    --tertiary-color: #A8CBFF;
 }
 
 * {
@@ -13,6 +14,8 @@
 body {
     background: black;
 }
+
+/* //////////////////NAV/////////////////// */
 
 header {
     border-bottom: 1px solid var(--main-color);
@@ -51,6 +54,11 @@ a {
     margin: 0 40px;
 }
 
+.nav-branding:hover {
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
 .nav-item > a {
     color: var(--main-color);
 }
@@ -74,6 +82,29 @@ a {
     transition: all 0.3s ease-in-out;
     background: var(--main-color);
 }
+
+/* //////////////////HERO/////////////////// */
+
+.hero {
+    color: white;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    font-size: 56px;
+    color: var(--tertiary-color);
+}
+
+.blob {
+    position: absolute;
+}
+
+
+/* //////////////////MOBILE/////////////////// */
 
 @media (max-width: 768px) {
     .nav-branding {
@@ -117,6 +148,3 @@ a {
         left: 0;
     }
 }
-
-
-

@@ -45,4 +45,14 @@ window.addEventListener('resize', changeHamburgerContent);
 
 ////////////////////////////////////////////////////
 
+function changeHeroTextColor() {
+    let target = document.querySelector('#hero-text');
+    target.style.color = "rgb("+(Math.random()*255)+", 180, 230)";
+    target.style.transition = "0.3s";
+    setTimeout(changeHeroTextColor, 500);
+}
+
+// changeHeroTextColor();
+
+////////////////////////////////////////////////////
 

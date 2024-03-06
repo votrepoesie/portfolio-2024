@@ -1,3 +1,4 @@
+
 ////////////////////////////////////////////////////
 
 const hamburger = document.querySelector('.hamburger');
@@ -69,4 +70,59 @@ anime({
 });
 
 ////////////////////////////////////////////////////
+
+animateDescriptions();
+
+function animateDescriptions() {
+    let descriptions = [
+        'multimedia artist',
+        'very fun to be around',
+        'cilantro hater',
+        'ENFJ-T',
+        'cat mom',
+        'introverted extrovert',
+        'zoology & paleontology nerd',
+        'sci-fi enthusiast',
+        'art historian',
+        'world traveler'
+    ];
+
+    createDivs(descriptions);
+}
+
+function createDivs(description) {
+    for (let i = 0; i < description.length; i++) {
+        let container = document.querySelector('.hero');
+        let div = document.createElement('div');
+        div.style.position = 'absolute';
+        div.style.color = 'var(--main-color)';
+        div.style.fontSize = '20px';
+        div.innerText = description[i];
+        container.appendChild(div);
+
+        positionAdjust(div);
+    }
+}
+
+function positionAdjust(div) {
+    div.style.left = Math.random() * 85 + '%';
+    div.style.top = Math.random() * 90 + '%';
+
+    let rect = div.getBoundingClientRect();
+    let hero = document.getElementById('hero-text');
+    let heroRect = hero.getBoundingClientRect();
+
+    if (rect.left + rect.width >= heroRect.left && rect.left <= heroRect.left + heroRect.width
+    && rect.top + rect.height >= heroRect.top && rect.top <= heroRect.top + heroRect.height) {
+        div.style.visibility = 'hidden';
+    }
+
+    let header = document.querySelector('header');
+    let headerRect = header.getBoundingClientRect();
+
+    if (rect.top + rect.height >= headerRect.top && rect.top <= headerRect.top + headerRect.height) {
+        console.log('Overlapping');
+        div.style.top = 100 + Math.random() * 500 + 'px';
+    }
+}
 

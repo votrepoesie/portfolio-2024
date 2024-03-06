@@ -72,6 +72,7 @@ anime({
 ////////////////////////////////////////////////////
 
 animateDescriptions();
+setInterval(refreshPosition, 5000);
 
 function animateDescriptions() {
     let descriptions = [
@@ -94,12 +95,15 @@ function createDivs(description) {
     for (let i = 0; i < description.length; i++) {
         let container = document.querySelector('.hero');
         let div = document.createElement('div');
+        container.appendChild(div);
+
         div.style.position = 'absolute';
         div.style.color = 'var(--main-color)';
         div.style.fontSize = '20px';
+        div.classList.add('description');
         div.innerText = description[i];
-        container.appendChild(div);
-
+    
+        animateDivs(div);
         positionAdjust(div);
     }
 }
@@ -114,6 +118,7 @@ function positionAdjust(div) {
 
     if (rect.left + rect.width >= heroRect.left && rect.left <= heroRect.left + heroRect.width
     && rect.top + rect.height >= heroRect.top && rect.top <= heroRect.top + heroRect.height) {
+        console.log('Overlap w/ hero text');
         div.style.visibility = 'hidden';
     }
 
@@ -121,8 +126,27 @@ function positionAdjust(div) {
     let headerRect = header.getBoundingClientRect();
 
     if (rect.top + rect.height >= headerRect.top && rect.top <= headerRect.top + headerRect.height) {
-        console.log('Overlapping');
+        console.log('Overlap w/ header');
         div.style.top = 100 + Math.random() * 500 + 'px';
     }
+}
+
+function animateDivs(div) {
+    anime({
+        targets: div,
+        opacity: 0,
+        duration: 1000 + Math.random() * 3000,
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        loop: true, 
+    })
+}
+
+function refreshPosition() {
+    let divs = document.querySelectorAll('.description');
+    divs.forEach(div => {
+        div.style.visibility = 'visible';
+        positionAdjust(div);
+    });
 }
 

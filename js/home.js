@@ -1,6 +1,5 @@
 //----------------- BLOB ANIMATION -----------------//
 
-// not this taking me 3 full hours ... over a simple bug
 const blob1 = document.getElementById('blob-1');
 const blob2 = document.getElementById('blob-2');
 const blob3 = document.getElementById('blob-3');
@@ -11,7 +10,6 @@ const blob6 = document.getElementById('blob-6');
 anime({
     targets: blob1,
     d:[
-        // { value: blob1.getAttribute('d') }, this is the culprit
         { value: blob2.getAttribute('d') },
         { value: blob3.getAttribute('d') },
         { value: blob4.getAttribute('d') },
@@ -76,7 +74,7 @@ function positionAdjust(div) {
         div.style.visibility = 'hidden';
     }
 
-    let header = document.querySelector('header');
+    let header = document.querySelector('special-header');
     let headerRect = header.getBoundingClientRect();
 
     if (rect.top + rect.height >= headerRect.top && rect.top <= headerRect.top + headerRect.height) {

@@ -1,3 +1,54 @@
+//----------------- CUSTOM HTML -----------------//
+
+class SpecialHeader extends HTMLElement {
+    connectedCallback() {
+
+        if (window.location.pathname.includes('index.html')) {
+            this.innerHTML = `
+                <nav class="navbar">
+                
+                    <a href="index.html" class="nav-branding">vivian r. li</a>
+                
+                    <ul class="nav-links">
+                        <li class="nav-item draw"><a href="html/draw.html">I draw,</a></li>
+                        <li class="nav-item design"><a href="html/design.html">design,</a></li>
+                        <li class="nav-item code"><a href="html/code.html">code,</a></li>
+                        <li class="nav-item make"><a href="html/make-things.html">and make things.</a></li>
+                    </ul>
+
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </nav>
+            `
+        } else {
+            this.innerHTML = `
+                <nav class="navbar">
+                
+                    <a href="../index.html" class="nav-branding">vivian r. li</a>
+                
+                    <ul class="nav-links">
+                        <li class="nav-item draw"><a href="draw.html">I draw,</a></li>
+                        <li class="nav-item design"><a href="design.html">design,</a></li>
+                        <li class="nav-item code"><a href="code.html">code,</a></li>
+                        <li class="nav-item make"><a href="make-things.html">and make things.</a></li>
+                    </ul>
+
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </nav>
+            `
+        }
+    }
+}
+
+customElements.define('special-header', SpecialHeader);
+
 //----------------- NAVBAR -----------------//
 
 const hamburger = document.querySelector('.hamburger');

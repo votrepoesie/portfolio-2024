@@ -11,7 +11,7 @@ class SpecialHeader extends HTMLElement {
                 
                     <ul class="nav-links">
                         <li class="nav-item draw"><a href="html/draw.html">I draw,</a></li>
-                        <li class="nav-item design"><a href="html/design.html">design,</a></li>
+                        <li class="nav-item design"><a href="~/html/design.html">design,</a></li>
                         <li class="nav-item code"><a href="html/code.html">code,</a></li>
                         <li class="nav-item make"><a href="html/make-things.html">and make things.</a></li>
                     </ul>

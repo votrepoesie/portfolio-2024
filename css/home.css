@@ -1,6 +1,7 @@
 /* //////////////////HERO/////////////////// */
 
 .hero {
+    margin-top: 70px;
     color: white;
     width: 100%;
     height: 90vh;
@@ -22,6 +23,29 @@
     position: absolute;
     z-index: -1;
 }
+
+.about {
+    padding: 50px 100px;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-img {
+    background: grey;
+    width: 40%;
+    height: 100%;
+}
+
+.about-text {
+    background: grey;
+    width: 40%;
+    height: 100%;
+}
+
+
 
 @media (max-width: 768px) {
     .hero {

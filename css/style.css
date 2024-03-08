@@ -16,7 +16,18 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    color: var(--main-color);
+}
+
 /* //////////////////NAV/////////////////// */
+
+special-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
 nav {
     border-bottom: 1px solid var(--main-color);

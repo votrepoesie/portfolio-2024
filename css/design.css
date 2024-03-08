@@ -2,5 +2,157 @@
     color: var(--secondary-color);
 }
 
+.case-container {
+    margin-top: 70px;
+    padding: 50px 100px;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
 
+.case {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 1px solid var(--main-color);
+    background: rgb(47, 19, 19);
+}
+    
+.case1 { 
+    grid-area: 1 / 1 / 5 / 4; 
+}
 
+.case2 { 
+    grid-area: 4 / 2 / 8 / 5; 
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.case3 { 
+    grid-area: 2 / 6 / 7 / 9; 
+}
+
+.case-category {
+    color: white;
+    background: black;
+    font-size: 20px;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.case-category2 {
+    height: 12%;
+}
+
+.case-category3 {
+    height: 9%;
+}
+
+.category-text {
+    padding-top: 5px;
+}
+
+.category-decor {
+    display: flex;
+    margin-right: 5px;
+}
+
+.category-decor > div {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border: 1px solid var(--main-color);
+}
+
+.case-content1 {
+    background: black;
+    height: 90%;
+    width: 100%;
+    background: url(../images/case-study/persuasive-design/apple-picking.gif);
+    background-size: cover;
+    background-position: center; 
+}
+
+.case-content2 {
+    background: black;
+    height: 88%;
+    width: 100%;
+    background: url(../images/case-study/persuasive-design/apple-picking.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+.case-content3 {
+    background: black;
+    height: 91%;
+    width: 100%;
+    background: url(../images/case-study/persuasive-design/apple-picking.gif);
+    background-size: cover;
+    background-position: center; 
+}
+
+.case-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.case-title {
+    color: var(--main-color);
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    width: 410px;
+    padding: 10px;
+    margin-bottom: 5%;
+    z-index: 1;
+}
+
+.case-button {
+    background: var(--main-color);
+    color: black;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px;
+    box-shadow: 5px 5px #625576;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
+
+/* //////////////////MOBILE/////////////////// */
+
+@media (max-width: 768px) { 
+    .case-container {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        height: 150vh;
+    }
+
+    .case {
+        height: 700px;
+        margin-bottom: 50px;
+    }
+
+    .case2 {
+        margin-top: 0;
+    }
+}

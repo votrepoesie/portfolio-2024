@@ -10,9 +10,9 @@ class SpecialHeader extends HTMLElement {
                     <a href="index.html" class="nav-branding">vivian r. li</a>
                 
                     <ul class="nav-links">
-                        <li class="nav-item draw"><a href="/draw/index.html">I draw,</a></li>
-                        <li class="nav-item design"><a href="/design/index.html">design,</a></li>
-                        <li class="nav-item code"><a href="/code/index.html">code,</a></li>
+                        <li class="nav-item draw"><a href="draw.html">I draw,</a></li>
+                        <li class="nav-item design"><a href="design.html">design,</a></li>
+                        <li class="nav-item code"><a href="code.html">code,</a></li>
                         <li class="nav-item make"><a href="#">and make things.</a></li>
                     </ul>
 

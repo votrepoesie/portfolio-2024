@@ -74,6 +74,7 @@ a {
 
 .nav-item > a {
     color: var(--main-color);
+    /* text-decoration: underline; */
 }
 
 .nav-item > a:hover {
@@ -94,6 +95,22 @@ a {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background: var(--main-color);
+}
+
+.footer {
+    background: black;
+    color: var(--main-color);
+    border-top: 1px solid var(--main-color);
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer > p {
+    margin: 0 24px;
 }
 
 /* //////////////////MOBILE/////////////////// */

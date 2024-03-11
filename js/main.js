@@ -3,51 +3,43 @@
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
 
-        if (window.location.pathname.includes('index.html')) {
-            this.innerHTML = `
-                <nav class="navbar">
+        this.innerHTML = `
+            <nav class="navbar">
                 
-                    <a href="index.html" class="nav-branding">vivian r. li</a>
+                <a href="index.html" class="nav-branding">vivian r. li</a>
                 
-                    <ul class="nav-links">
-                        <li class="nav-item draw"><a href="draw.html">I draw,</a></li>
-                        <li class="nav-item design"><a href="design.html">design,</a></li>
-                        <li class="nav-item code"><a href="code.html">code,</a></li>
-                        <li class="nav-item make"><a href="#">and make things.</a></li>
-                    </ul>
+                <ul class="nav-links">
+                    <li class="nav-item draw"><a href="draw.html">I draw,</a></li>
+                    <li class="nav-item design"><a href="design.html">design,</a></li>
+                    <li class="nav-item code"><a href="code.html">code,</a></li>
+                    <li class="nav-item make"><a href="make.html">and make things.</a></li>
+                </ul>
 
-                    <div class="hamburger">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-                </nav>
-            `
-        } else {
-            this.innerHTML = `
-                <nav class="navbar">
-                
-                    <a href="../index.html" class="nav-branding">vivian r. li</a>
-                
-                    <ul class="nav-links">
-                        <li class="nav-item draw"><a href="draw.html">I draw,</a></li>
-                        <li class="nav-item design"><a href="design.html">design,</a></li>
-                        <li class="nav-item code"><a href="code.html">code,</a></li>
-                        <li class="nav-item make"><a href="make-things.html">and make things.</a></li>
-                    </ul>
-
-                    <div class="hamburger">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-                </nav>
-            `
-        }
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        `;
     }
 }
 
 customElements.define('special-header', SpecialHeader);
+
+class SpecialFooter extends HTMLElement {
+    connectedCallback() {
+
+        this.innerHTML = `
+            <div class="footer">
+                <p>one must still have chaos in oneself to be able to give birth to a dancing star ✨</p>
+                <p>© 2024 vivian r. li</p>
+            </div>
+        `;
+    }
+}
+
+customElements.define('special-footer', SpecialFooter);
 
 //----------------- NAVBAR -----------------//
 
@@ -94,5 +86,20 @@ changeHamburgerContent();
 //when page is resized
 window.addEventListener('resize', changeHamburgerContent);
 
+//----------------- DIRECT TO SUBPAGE -----------------//
 
-
+function newPage(e) {
+    let element = document.getElementById(e);
+    let id = element.id;
+    switch (id) {
+        case 'case1':
+            window.location.href = 'museum.html';
+            break;
+        case 'case2':
+            window.location.href = 'chance-encounter.html';
+            break;
+        case 'case3':
+            window.location.href = 'vr-game.html';
+            break;
+    }
+}

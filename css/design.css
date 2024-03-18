@@ -100,17 +100,16 @@
     .case-container {
         margin-top: 70px;
         display: flex;
-        flex-direction: column;
-        height: 150vh;
+        justify-content: center;
+        padding: 20px;
     }
 
     .case {
-        height: 700px;
-        margin-bottom: 50px;
+        width: 90%;
     }
 
-    .case2 {
-        margin-top: 0;
+    .case-title {
+        font-size: 35px;
     }
 }
 
@@ -186,6 +185,25 @@
     margin: 20px 0;
 }
 
+.research-and-ideation .img-container {
+    margin: 70px 0;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .research-and-ideation .img {
-    height: 500px;
+    height: 100%;
+    width: 32%;
+    background: grey;
+}
+
+.blog-container .caption {
+    color: var(--caption);
+    font-size: 20px;
+    font-style: italic;
+}
+
+.caption span {
+    font-weight: 600;
 }

@@ -32,7 +32,7 @@ class SpecialFooter extends HTMLElement {
 
         this.innerHTML = `
             <div class="footer">
-                <p>one must still have chaos in oneself to be able to give birth to a dancing star ✨</p>
+                <p>as nietzsche once said, one must still have chaos in oneself to be able to give birth to a dancing star</p>
                 <p>© 2024 vivian r. li</p>
             </div>
         `;
@@ -86,6 +86,7 @@ changeHamburgerContent();
 //when page is resized
 window.addEventListener('resize', changeHamburgerContent);
 
+
 //----------------- DIRECT TO SUBPAGE -----------------//
 
 function newPage(e) {
@@ -93,13 +94,13 @@ function newPage(e) {
     let id = element.id;
     switch (id) {
         case 'case1':
-            window.location.href = 'museum.html';
+            window.location.href = 'vr-game.html';
             break;
         case 'case2':
             window.location.href = 'chance-encounter.html';
             break;
         case 'case3':
-            window.location.href = 'vr-game.html';
+            window.location.href = 'museum.html';
             break;
     }
 }

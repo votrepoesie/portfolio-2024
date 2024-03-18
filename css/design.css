@@ -4,36 +4,22 @@
 
 .case-container {
     margin-top: 70px;
-    padding: 50px 100px;
-    height: 110vh;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    padding: 50px 210px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .case {
+    height: 450px;
+    width: 500px;
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: start;
     border: 1px solid var(--main-color);
     background: rgb(47, 19, 19);
     cursor: pointer;
-}
-    
-.case1 { 
-    grid-area: 1 / 1 / 6 / 4; 
-}
-
-.case2 { 
-    grid-area: 5 / 2 / 10 / 5; 
-    /* margin-top: 40px; */
-    z-index: 1;
-}
-
-.case3 { 
-    grid-area: 2 / 6 / 7 / 9; 
 }
 
 .case-category {
@@ -47,14 +33,6 @@
     align-items: center;
     padding-left: 20px;
     border-bottom: 1px solid var(--main-color);
-}
-
-.case-category2 {
-    height: 12%;
-}
-
-.case-category3 {
-    height: 9%;
 }
 
 .category-text {
@@ -75,29 +53,15 @@
 
 .case-content1 {
     background: black;
-    height: 90%;
-    width: 100%;
-    /* background: url(../images/case-study/persuasive-design/apple-picking.gif); */
-    background-size: cover;
-    background-position: center; 
+    background: url(../images/case-study/persuasive-design/apple-picking.gif);
 }
 
 .case-content2 {
     background: black;
-    height: 88%;
-    width: 100%;
-    /* background: url(../images/case-study/persuasive-design/apple-picking.gif); */
-    background-size: cover;
-    background-position: center;
 }
 
 .case-content3 {
     background: black;
-    height: 91%;
-    width: 100%;
-    background: url(../images/case-study/persuasive-design/apple-picking.gif);
-    background-size: cover;
-    background-position: center; 
 }
 
 .case-content {
@@ -106,6 +70,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 90%;
+    width: 100%;
+    background-size: cover;
+    background-position: center; 
 }
 
 .case-title {
@@ -116,18 +84,6 @@
     width: 410px;
     padding: 10px;
     margin-bottom: 5%;
-    z-index: 1;
-}
-
-.case-button {
-    background: var(--main-color);
-    color: black;
-    border: none;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 10px 20px;
-    box-shadow: 5px 5px #625576;
-    cursor: pointer;
     z-index: 1;
 }
 

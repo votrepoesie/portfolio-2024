@@ -98,7 +98,9 @@ a {
 }
 
 .footer {
-    background: black;
+    background: url(https://i.pinimg.com/originals/46/1e/09/461e091a9bfeff233d5e9fd239507990.gif);
+    /* background: black; */
+    background-size: cover;
     color: var(--main-color);
     border-top: 1px solid var(--main-color);
     text-align: center;

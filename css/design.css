@@ -122,10 +122,16 @@
     margin-top: 70px;
 }
 
-.blog-container p {
+.body-text {
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 300;
+}
+
+.bolded-body-text {
+    color: var(--tertiary-color);
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .splash {
@@ -140,18 +146,11 @@
     margin: 20px 0;
 }
 
-.title h3 {
+.tagline {
     font-size: 27px;
     color: white;
     font-weight: normal;
     margin: 5px 0;
-}
-
-.tag h3 {
-    font-size: 27px;
-    color: var(--tertiary-color);
-    font-weight: 600;
-    margin-bottom: 10px;
 }
 
 .tags {
@@ -186,8 +185,8 @@
 }
 
 .research-and-ideation .img-container {
-    margin: 70px 0;
-    height: 300px;
+    margin: 40px 0;
+    height: 238px;
     display: flex;
     justify-content: space-between;
 }
@@ -195,7 +194,7 @@
 .research-and-ideation .img {
     height: 100%;
     width: 32%;
-    background: grey;
+    /* background: grey; */
 }
 
 .blog-container .caption {
@@ -207,3 +206,19 @@
 .caption span {
     font-weight: 600;
 }
+
+.img1 {
+    background: url(../images/case-study/persuasive-design/study-group-1.png);
+    background-size: cover;
+}
+
+.img2 {
+    background: url(../images/case-study/persuasive-design/study-group-2.png);
+    background-size: cover;
+}
+
+.img3 {
+    background: url(../images/case-study/persuasive-design/study-group-3.png);
+    background-size: cover;
+}
+

@@ -49,9 +49,12 @@ function createDivs(description) {
         let div = document.createElement('div');
         container.appendChild(div);
 
+        let colors = ['var(--secondary-color)', 'var(--tertiary-color)', 'var(--red)', 'var(--yellow)', 'var(--green)', 'var(--orange)'];
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];
+
         div.style.position = 'absolute';
-        div.style.color = 'var(--main-color)';
-        div.style.fontSize = '20px';
+        div.style.color = randomColor;
+        div.style.fontSize = '25px';
         div.classList.add('description');
         div.innerText = description[i];
     
@@ -63,6 +66,12 @@ function createDivs(description) {
 function positionAdjust(div) {
     div.style.left = Math.random() * 85 + '%';
     div.style.top = Math.random() * 90 + '%';
+    // TO-DO: 
+    // make an empty array and push positions into that array
+    // check repeats and reassign positions, solves overlap issue
+    // might need to take into account the size of the divs
+
+
 
     let rect = div.getBoundingClientRect();
     let hero = document.getElementById('hero-text');

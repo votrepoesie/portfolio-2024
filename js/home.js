@@ -23,6 +23,9 @@ anime({
 
 //----------------- FLOATING TEXT -----------------//
 
+
+// what if only shows 6 divs each time??
+
 animateDescriptions();
 setInterval(refreshPosition, 5000);
 
@@ -33,8 +36,8 @@ function animateDescriptions() {
         'cilantro hater',
         'ENFJ-T',
         'cat mom',
-        'introverted extrovert',
-        'zoology & paleontology nerd',
+        'extroverted introvert',
+        'paleontology nerd',
         'sci-fi enthusiast',
         'art historian',
         'world traveler'
@@ -45,8 +48,10 @@ function animateDescriptions() {
 
 function createDivs(description) {
 
-    let positionsTop = [];
-    let positionsLeft = [];
+    let positionsX1 = [];
+    let positionsX2 = [];
+    let positionsY1 = [];
+    let positionsY2 = [];
 
     for (let i = 0; i < description.length; i++) {
         let container = document.querySelector('.hero');
@@ -64,13 +69,29 @@ function createDivs(description) {
     
         animateDivs(div);
         positionAdjust(div);
-        
-        // check overlap 
-        positionsTop.push(div.style.top);
-        positionsLeft.push(div.style.left);
-    }
 
-    console.log(positionsTop, positionsLeft);
+        // get div dimensions
+        let right = div.getBoundingClientRect().right;
+        let bottom = div.getBoundingClientRect().bottom;
+        positionsX1.push(right);
+        positionsY1.push(bottom);
+
+        let left = div.getBoundingClientRect().left;
+        let top = div.getBoundingClientRect().top;
+        positionsX2.push(left);
+        positionsY2.push(top);
+
+        // check for overlap
+        if (i > 0) {
+            for (let j = 0; j < i; j++) {
+                if (positionsX1[i] >= positionsX2[j] && positionsX2[i] <= positionsX1[j]
+                && positionsY1[i] >= positionsY2[j] && positionsY2[i] <= positionsY1[j]) {
+                    console.log('overlap w/ other divs');
+                    div.style.visibility = 'hidden';
+                }
+            }
+        }
+    }
 }
 
 function positionAdjust(div) {
@@ -83,7 +104,7 @@ function positionAdjust(div) {
 
     if (rect.left + rect.width >= heroRect.left && rect.left <= heroRect.left + heroRect.width
     && rect.top + rect.height >= heroRect.top && rect.top <= heroRect.top + heroRect.height) {
-        // console.log('Overlap w/ hero text');
+        console.log('overlap w/ hero text');
         div.style.visibility = 'hidden';
     }
 
@@ -91,7 +112,7 @@ function positionAdjust(div) {
     let headerRect = header.getBoundingClientRect();
 
     if (rect.top + rect.height >= headerRect.top && rect.top <= headerRect.top + headerRect.height) {
-        // console.log('Overlap w/ header');
+        console.log('overlap w/ header');
         div.style.top = 100 + Math.random() * 500 + 'px';
     }
 }
@@ -108,18 +129,38 @@ function animateDivs(div) {
 }
 
 function refreshPosition() {
-
-    let positionsTop = [];
-    let positionsLeft = [];
+    let positionsX1 = [];
+    let positionsX2 = [];
+    let positionsY1 = [];
+    let positionsY2 = [];
 
     let divs = document.querySelectorAll('.description');
-    divs.forEach(div => {
+
+    // Use forEach loop to iterate over divs
+    divs.forEach((div, i) => {
         div.style.visibility = 'visible';
         positionAdjust(div);
 
-        positionsTop.push(div.style.top);
-        positionsLeft.push(div.style.left);
-    });
+        // get div dimensions
+        let right = div.getBoundingClientRect().right;
+        let bottom = div.getBoundingClientRect().bottom;
+        positionsX1.push(right); // left + width
+        positionsY1.push(bottom); // top + height
 
-    console.log(positionsTop, positionsLeft);
+        let left = div.getBoundingClientRect().left;
+        let top = div.getBoundingClientRect().top;
+        positionsX2.push(left); // left
+        positionsY2.push(top); // top
+
+        // check for overlap
+        if (i > 0) {
+            for (let j = 0; j < i; j++) {
+                if (positionsX1[i] >= positionsX2[j] && positionsX2[i] <= positionsX1[j] &&
+                    positionsY1[i] >= positionsY2[j] && positionsY2[i] <= positionsY1[j]) {
+                    console.log('overlap w/ other divs');
+                    div.style.visibility = 'hidden';
+                }
+            }
+        }
+    });
 }

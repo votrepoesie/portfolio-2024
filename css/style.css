@@ -25,6 +25,10 @@ h1 {
     color: var(--main-color);
 }
 
+.secondary-highlight {
+    color: var(--secondary-color);
+}
+
 /* //////////////////NAV/////////////////// */
 
 special-header {

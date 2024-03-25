@@ -17,6 +17,7 @@
     margin-top: 40px;
     text-align: center;
     padding: 80px 120px;
+    border: 1px solid var(--tertiary-color);
 }
 
 #blob {

@@ -44,6 +44,10 @@ function animateDescriptions() {
 }
 
 function createDivs(description) {
+
+    let positionsTop = [];
+    let positionsLeft = [];
+
     for (let i = 0; i < description.length; i++) {
         let container = document.querySelector('.hero');
         let div = document.createElement('div');
@@ -60,18 +64,18 @@ function createDivs(description) {
     
         animateDivs(div);
         positionAdjust(div);
+        
+        // check overlap 
+        positionsTop.push(div.style.top);
+        positionsLeft.push(div.style.left);
     }
+
+    console.log(positionsTop, positionsLeft);
 }
 
 function positionAdjust(div) {
     div.style.left = Math.random() * 85 + '%';
     div.style.top = Math.random() * 90 + '%';
-    // TO-DO: 
-    // make an empty array and push positions into that array
-    // check repeats and reassign positions, solves overlap issue
-    // might need to take into account the size of the divs
-
-
 
     let rect = div.getBoundingClientRect();
     let hero = document.getElementById('hero-text');
@@ -79,7 +83,7 @@ function positionAdjust(div) {
 
     if (rect.left + rect.width >= heroRect.left && rect.left <= heroRect.left + heroRect.width
     && rect.top + rect.height >= heroRect.top && rect.top <= heroRect.top + heroRect.height) {
-        console.log('Overlap w/ hero text');
+        // console.log('Overlap w/ hero text');
         div.style.visibility = 'hidden';
     }
 
@@ -87,7 +91,7 @@ function positionAdjust(div) {
     let headerRect = header.getBoundingClientRect();
 
     if (rect.top + rect.height >= headerRect.top && rect.top <= headerRect.top + headerRect.height) {
-        console.log('Overlap w/ header');
+        // console.log('Overlap w/ header');
         div.style.top = 100 + Math.random() * 500 + 'px';
     }
 }
@@ -104,9 +108,18 @@ function animateDivs(div) {
 }
 
 function refreshPosition() {
+
+    let positionsTop = [];
+    let positionsLeft = [];
+
     let divs = document.querySelectorAll('.description');
     divs.forEach(div => {
         div.style.visibility = 'visible';
         positionAdjust(div);
+
+        positionsTop.push(div.style.top);
+        positionsLeft.push(div.style.left);
     });
+
+    console.log(positionsTop, positionsLeft);
 }

@@ -1,7 +1,6 @@
-/* 
+/* /////////////////////// SUB NAV //////////////////////// */
+
 .directory {
-    color: var(--main-color);
-    font-size: 20px;
     font-weight: 300;
     position: fixed;
     margin-left: 60px;
@@ -9,24 +8,73 @@
 
 .directory li {
     padding: 5px;
-} */
+    cursor: pointer;
+}
 
+.directory li:hover {
+    color: var(--secondary-color);
+}
+
+.directory-link {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+/* ////////////////////// UNIVERSAL /////////////////////// */
+
+.design a {
+    color: var(--secondary-color);
+}
+
+/* centers content w/ fixed width */
 .blog-container {
     width: 70%;
     margin: 0 auto;
     margin-top: 110px;
 }
 
+.section {
+    margin: 100px 0;
+}
+
+.sub-section {
+    margin: 80px 0;
+}
+
+/* title of the page */
+h1 {
+    color: var(--main-color);
+    font-size: 57px;
+    margin: 20px 0;
+}
+
+/* title of a section */
+h2 {
+    color: var(--main-color);
+    font-size: 47px;
+    margin: 20px 0;
+}
+
+/* title of a sub-section */
+h3 {
+    color: var(--tertiary-color);
+    font-size: 37px;
+    margin: 20px 0;
+}
+
+/* used in paragraph */
 .body-text {
     color: white;
     font-size: 22px;
     font-weight: 300;
 }
 
+/* for highlighting body text */
 .body-text span {
     color: var(--secondary-color);
 }
 
+/* for sub-headings smaller than h2 */
 .bolded-body-text {
     color: var(--tertiary-color);
     font-size: 24px;
@@ -34,16 +82,60 @@
     margin: 20px 0;
 }
 
-.splash {
+.blog-container li {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 4px 0;
+}
+
+/* small text under image */
+.caption {
+    color: var(--caption);
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* bolded */
+.caption span {
+    font-weight: 600;
+}
+
+.highlight {
+    font-size: 28px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--secondary-color);
+    margin: 28px 0;
+}
+
+/* div that spans blog-container */
+.big-img {
     width: 100%;
-    height: 500px;
-    border: 1px solid var(--main-color);
     margin: 40px 0;
 }
 
-.title h1 {
-    font-size: 57px;
-    margin: 20px 0;
+.big-img img {
+    width: 100%;
+}
+
+.big-img .caption {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* ///////////////////// SECTION 0 ////////////////////// */
+
+.hero {
+    width: 100%;
+    height: 500px;
+    margin: 40px 0;
+    /* border: 1px solid var(--main-color); */
+}
+
+.hero .video {
+    width: 100%;
+    height: 100%;
 }
 
 .tagline {
@@ -63,27 +155,23 @@
     width: 33%;
 }
 
-.overview h1 {
-    font-size: 47px;
-    margin-bottom: 20px;
-}
+/* ///////////////////// SECTION 1 ////////////////////// */
 
-.overview {
-    border: 1px solid var(--main-color);
+/* .overview {
+    border: 1px solid var(--secondary-color);
     border-radius: 32px;
     padding: 40px 50px;
     margin: 100px 0;
+} */
+
+.overview h2 {
+    margin-top: 0;
 }
 
-.research-and-ideation h1 {
-    font-size: 47px;
-    margin: 20px 0;
-}
+/* ///////////////////// SECTION 2 ////////////////////// */
 
-.research-and-ideation h2 {
-    font-size: 37px;
-    color: var(--tertiary-color);
-    margin: 20px 0;
+.problem {
+    margin-top: 20px;
 }
 
 .research-and-ideation .img-container {
@@ -97,20 +185,6 @@
     height: 100%;
     width: 32%;
     /* border-radius: 16px; */
-}
-
-.blog-container .caption {
-    color: var(--caption);
-    font-size: 20px;
-    font-style: italic;
-}
-
-.caption span {
-    font-weight: 600;
-}
-
-.caption {
-    margin-bottom: 50px;
 }
 
 .img1 {
@@ -128,44 +202,61 @@
     background-size: cover;
 }
 
+.findings {
+    margin: 50px 0;
+}
+
 .finding {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 50px;
 }
 
-.finding .graphic {
-    width: 150px;
-    margin-left: 30px;
-    margin-right: 50px;
+.number-graphic {
     display: flex;
-}
-
-.finding1 {
-    margin-top: 50px;
-}
-
-.finding1 .graphic {
+    flex-direction: row;
     border: 1px solid var(--tertiary-color);
+    width: 4%;
+    margin-left: 3%;
 }
 
-.finding2 .component {
+.no-border {
+    border: none;
+}
+
+.number-graphic .component-1-no-right {
+    width: 50%;
     border: 1px solid var(--tertiary-color);
+    border-right: none;
+}
+
+.number-graphic .component-1 {
+    border: 1px solid var(--tertiary-color);
+    height: 100%;
     width: 50%;
 }
 
-.finding3 .component {
-    border: 1px solid var(--tertiary-color);
+.number-graphic .component-2-no-right {
     width: 33%;
+    border: 1px solid var(--tertiary-color);
+    border-right: none;
+}
+
+.number-graphic .component-2 {
+    border: 1px solid var(--tertiary-color);
+    height: 100%;
+    width: 33%;
+}
+
+.finding .text {
+    margin-left: 20px;
+    width: 88%;
 }
 
 .finding .bolded-body-text {
     margin-top: 0;
-}
-
-.finding3 {
-    margin-bottom: 100px;
 }
 
 .ideation .img {
@@ -183,31 +274,58 @@
     margin: 10px 0;
 }
 
+/* ///////////////////// SECTION 3 ////////////////////// */
+
 .rapid-prototyping {
     margin: 150px 0;
-}
-
-.rapid-prototyping h1 {
-    font-size: 47px;
-    margin: 40px 0;
 }
 
 .rapid-prototyping .title span {
     text-decoration: line-through;
 }
 
-.big-img {
+.composition-1 {
     width: 100%;
-    margin: 40px 0;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0;
 }
 
-.big-img img {
-    width: 100%;
+.composition-1-left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
 }
 
-.big-img .caption {
-    text-align: center;
-    margin: 10px 0;
+.text-container {
+    border: 1px solid var(--tertiary-color);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.composition-1 .bolded-body-text {
+    margin-top: 0;
+}
+
+.composition-1 li {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.composition-1-right {
+    width: 55%;
+    height: 100%;
+}
+
+.carousel{
+    width: 100%;
+    height: 100%;
+    background: plum;
+    /* background: url(../images/case-study/persuasive-design/tree-setup.jpeg); */
+    /* background-size: cover; */
 }
 
 

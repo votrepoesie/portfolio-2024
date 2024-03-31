@@ -167,4 +167,13 @@ a {
     .nav-links.active {
         left: 0;
     }
+
+    .footer {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .footer .rights {
+        margin-top: 30px;
+    }
 }

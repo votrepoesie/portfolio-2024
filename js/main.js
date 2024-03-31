@@ -32,8 +32,8 @@ class SpecialFooter extends HTMLElement {
 
         this.innerHTML = `
             <div class="footer">
-                <p>as nietzsche once said, one must still have chaos in oneself to be able to give birth to a dancing star</p>
-                <p>© 2024 vivian r. li</p>
+                <p>One must still have chaos in oneself to be able to give birth to a dancing star.</p>
+                <p class="rights">© 2024 vivian r. li</p>
             </div>
         `;
     }

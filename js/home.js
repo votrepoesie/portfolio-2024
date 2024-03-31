@@ -63,7 +63,13 @@ function createDivs(description) {
 
         div.style.position = 'absolute';
         div.style.color = randomColor;
-        div.style.fontSize = '25px';
+
+        //TODO!! listen for resize event, and the random placement is a little wack on mobile
+        if (window.innerWidth < 800) {
+            div.style.fontSize = '18px';
+        } else {
+            div.style.fontSize = '25px';
+        }
         div.classList.add('description');
         div.innerText = description[i];
     

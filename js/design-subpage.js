@@ -16,58 +16,58 @@ function adjustDivHeight() {
 
 ///////////////////////////////////////////////////
 
-// Initialize YouTube player
-var player;
+// // Initialize YouTube player
+// var player;
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('videoPlayer', {
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player('videoPlayer', {
+//     events: {
+//       'onReady': onPlayerReady,
+//       'onStateChange': onPlayerStateChange
+//     }
+//   });
+// }
 
-// When the player is ready, set it to autoplay and loop
-function onPlayerReady(event) {
-  event.target.playVideo();
-  event.target.setLoop(true);
-  event.target.setPlaybackQuality('hd720'); // Set preferred quality
-}
+// // When the player is ready, set it to autoplay and loop
+// function onPlayerReady(event) {
+//   event.target.playVideo();
+//   event.target.setLoop(true);
+//   event.target.setPlaybackQuality('hd720'); // Set preferred quality
+// }
 
-// When the player state changes
-function onPlayerStateChange(event) {
-  // Check if the video has ended
-  if (event.data == YT.PlayerState.ENDED) {
-    // Restart the video when it ends
-    event.target.playVideo();
-  }
-}
-// Initialize YouTube player
+// // When the player state changes
+// function onPlayerStateChange(event) {
+//   // Check if the video has ended
+//   if (event.data == YT.PlayerState.ENDED) {
+//     // Restart the video when it ends
+//     event.target.playVideo();
+//   }
+// }
+// // Initialize YouTube player
 
-var player;
+// var player;
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('videoPlayer', {
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player('videoPlayer', {
+//     events: {
+//       'onReady': onPlayerReady,
+//       'onStateChange': onPlayerStateChange
+//     }
+//   });
+// }
 
-// When the player is ready, set it to autoplay and loop
-function onPlayerReady(event) {
-  event.target.playVideo();
-  event.target.setLoop(true);
-  event.target.setPlaybackQuality('hd720'); // Set preferred quality
-}
+// // When the player is ready, set it to autoplay and loop
+// function onPlayerReady(event) {
+//   event.target.playVideo();
+//   event.target.setLoop(true);
+//   event.target.setPlaybackQuality('hd720'); // Set preferred quality
+// }
 
-// When the player state changes
-function onPlayerStateChange(event) {
-  // Check if the video has ended
-  if (event.data == YT.PlayerState.ENDED) {
-    // Restart the video when it ends
-    event.target.playVideo();
-  }
-}
+// // When the player state changes
+// function onPlayerStateChange(event) {
+//   // Check if the video has ended
+//   if (event.data == YT.PlayerState.ENDED) {
+//     // Restart the video when it ends
+//     event.target.playVideo();
+//   }
+// }

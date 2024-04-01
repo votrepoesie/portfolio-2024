@@ -119,11 +119,6 @@ h3 {
     width: 100%;
 }
 
-.big-img .caption {
-    text-align: center;
-    margin: 10px 0;
-}
-
 /* ///////////////////// SECTION 0 ////////////////////// */
 
 .hero {
@@ -326,30 +321,59 @@ h3 {
 
 .composition-1-right {
     width: 50%;
-    height: 100%;
 }
 
-.carousel {
+.carousel-1 {
     width: 100%;
     height: 100%;
     background: url(../images/case-study/persuasive-design/tree-setup.jpeg);
     background-size: cover;
-    /* border-radius: 16px; */
 }
 
-/* .med-img {
-    width: 50%;
-    margin: auto;
-}
-
-.med-img img {
+.carousel-2 {
     width: 100%;
+    height: 100%;
+    background: url(../images/case-study/persuasive-design/balloons.png);
+    background-size: cover;
 }
 
-.med-img .caption {
+.rapid-prototyping .img-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.rapid-prototyping .img-container img {
+    width: 50%;
+}
+
+.rapid-prototyping .caption {
     text-align: center;
     margin: 10px 0;
-} */
+}
+
+.negative-thought .img-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.negative-thought .img {
+    width: 48%;
+}
+
+.negative-thought .img-1 {
+    background: url(../images/case-study/persuasive-design/flow3.png);
+    background-size: cover;
+}
+
+.negative-thought .img-2 {
+    background: url(../images/case-study/persuasive-design/flow3.gif);
+    background-size: cover;
+}
+
 
 
 

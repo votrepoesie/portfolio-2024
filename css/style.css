@@ -17,8 +17,9 @@
     scroll-behavior: smooth;
 }
 
-body {
-    background: black;
+.body {
+    font-family: "Inter", sans-serif;
+    background-color: black;
     overflow-x: hidden;
 }
 
@@ -53,7 +54,7 @@ a {
     text-decoration: none;
 }
 
-.navbar {
+.body .navbar {
     min-height: 70px;
     display: flex;
     justify-content: space-between;
@@ -61,7 +62,7 @@ a {
     padding: 0 24px;
 }
 
-.nav-links {
+.body .nav-links {
     display: flex;
     justify-content: space-between;
     align-items: center;

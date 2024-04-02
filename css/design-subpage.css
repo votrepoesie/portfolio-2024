@@ -22,6 +22,10 @@
 
 /* ////////////////////// UNIVERSAL /////////////////////// */
 
+.body a {
+    text-decoration: none;
+}
+
 .design a {
     color: var(--secondary-color);
 }
@@ -42,47 +46,51 @@
 }
 
 /* title of the page */
-h1 {
+.body h1 {
     color: var(--main-color);
     font-size: 50px;
     margin: 20px 0;
+    font-weight: 700;
 }
 
 /* title of a section */
-h2 {
+.body h2 {
     color: var(--main-color);
     font-size: 40px;
     margin: 20px 0;
+    font-weight: 600;
 }
 
 /* title of a sub-section */
-h3 {
+.body h3 {
     color: var(--tertiary-color);
     font-size: 34px;
+    font-weight: 600;
     margin: 20px 0;
 }
 
 /* used in paragraph */
-.body-text {
+.body .body-text {
     color: white;
     font-size: 22px;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 /* for highlighting body text */
-.body-text span {
+.body .body-text span {
     color: var(--secondary-color);
 }
 
 /* for sub-headings smaller than h2 */
-.bolded-body-text {
+.body .bolded-body-text {
     color: var(--tertiary-color);
     font-size: 24px;
     font-weight: 600;
     margin: 20px 0;
 }
 
-.blog-container li {
+.body .blog-container li {
     color: white;
     font-size: 20px;
     font-weight: 300;
@@ -133,10 +141,10 @@ h3 {
     height: 100%;
 }
 
-.tagline {
+#tagline {
     font-size: 26px;
-    color: white;
-    /* color: var(--main-color); */
+    /* color: white; */
+    color: var(--tertiary-color);
     font-weight: 300;
     margin: 5px 0;
 }
@@ -296,6 +304,7 @@ h3 {
 .composition-1-left {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 45%;
 }
 
@@ -314,7 +323,7 @@ h3 {
     margin-top: 0;
 }
 
-.composition-1 li {
+.body .composition-1 li {
     list-style-type: decimal;
     margin-left: 20px;
 }
@@ -326,7 +335,7 @@ h3 {
 .carousel-1 {
     width: 100%;
     height: 100%;
-    background: url(../images/case-study/persuasive-design/tree-setup.jpeg);
+    background: url(../images/case-study/persuasive-design/apple-picking.jpeg);
     background-size: cover;
 }
 
@@ -435,4 +444,120 @@ h3 {
     margin: 10px 0;
 }
 
+/* ///////////////////// PHONE ////////////////////// */
 
+@media (max-width: 768px) {
+
+* {
+    overflow-x: hidden;
+}
+
+.directory {
+    display: none;
+}
+
+.blog-container {
+    width: 95%;
+}
+
+.section {
+    margin: 60px 0;
+}
+
+.sub-section {
+    margin: 30px 0;
+}
+
+.caption {
+    font-size: 16px;
+}
+
+/* /////////////////////////////// */
+
+.hero {
+    height: 50px;
+}
+
+.body h1 {
+    font-size: 35px;
+}
+
+.body h2 {
+    font-size: 32px;
+}
+
+.body h3 {
+    font-size: 28px;
+}
+
+.body .bolded-body-text {
+    font-size: 22px;
+}
+
+.body .body-text {
+    font-size: 18px;
+}
+
+/* ////////////////////////////// */
+
+.tags {
+    flex-direction: column;
+}
+
+.tag {
+    width: 100%;
+}
+
+.tags .bolded-body-text {
+    font-size: 28px;
+}
+
+.tags .body-text {
+    font-size: 24px;
+}
+
+/* ////////////////////////////// */
+
+.research-and-ideation h2 {
+    margin-bottom: 0;
+}
+
+.problem {
+    margin-top: 0;
+}
+
+.research-and-ideation .img-container {
+    flex-direction: column;
+    height: auto;
+    margin: 10px 0;
+}
+
+.research-and-ideation .img {
+    width: 100%;
+    height: 260px;
+    margin: 5px 0;
+}
+
+/* ////////////////////////////// */
+
+.composition-1 {
+    flex-direction: column;
+}
+
+.body .blog-container li {
+    font-size: 18px;
+    list-style-type: decimal;
+}
+
+.composition-1-left {
+    width: 100%;
+}
+
+.composition-1-right {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/*  */
+
+}

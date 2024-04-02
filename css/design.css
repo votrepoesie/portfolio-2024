@@ -3,7 +3,7 @@
 }
 
 .case-container {
-    margin-top: 70px;
+    margin-top: 50px;
     padding: 50px 210px;
     display: flex;
     flex-wrap: wrap;
@@ -13,13 +13,18 @@
 .case {
     height: 450px;
     width: 500px;
-    margin: 50px 0;
+    margin: 40px 0;
     display: flex;
     flex-direction: column;
     align-items: start;
     border: 1px solid var(--main-color);
     background: rgb(47, 19, 19);
     cursor: pointer;
+}
+
+.case:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
 }
 
 .case-category {

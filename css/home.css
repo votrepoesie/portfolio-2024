@@ -60,16 +60,17 @@
 }
 
 .about-body {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
     color: white;
 }
 
 .about-link {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
     color: var(--main-color);
     text-decoration: underline;
+    margin: 10px 0;
 }
 
 @media (max-width: 768px) {

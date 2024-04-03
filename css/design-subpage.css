@@ -22,7 +22,7 @@
 
 /* ////////////////////// UNIVERSAL /////////////////////// */
 
-.body a {
+body a {
     text-decoration: none;
 }
 
@@ -46,7 +46,7 @@
 }
 
 /* title of the page */
-.body h1 {
+h1 {
     color: var(--main-color);
     font-size: 50px;
     margin: 20px 0;
@@ -54,7 +54,7 @@
 }
 
 /* title of a section */
-.body h2 {
+h2 {
     color: var(--main-color);
     font-size: 40px;
     margin: 20px 0;
@@ -62,7 +62,7 @@
 }
 
 /* title of a sub-section */
-.body h3 {
+h3 {
     color: var(--tertiary-color);
     font-size: 34px;
     font-weight: 600;
@@ -70,27 +70,27 @@
 }
 
 /* used in paragraph */
-.body .body-text {
+.body-text {
     color: white;
     font-size: 22px;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.3;
 }
 
 /* for highlighting body text */
-.body .body-text span {
+.body-text span {
     color: var(--secondary-color);
 }
 
 /* for sub-headings smaller than h2 */
-.body .bolded-body-text {
+.bolded-body-text {
     color: var(--tertiary-color);
     font-size: 24px;
     font-weight: 600;
     margin: 20px 0;
 }
 
-.body .blog-container li {
+.blog-container li {
     color: white;
     font-size: 20px;
     font-weight: 300;
@@ -323,9 +323,12 @@
     margin-top: 0;
 }
 
-.body .composition-1 li {
+.composition-1 li {
+    font-size: 19px;
     list-style-type: decimal;
-    margin-left: 20px;
+    margin-left: 36px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .composition-1-right {

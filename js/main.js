@@ -2,9 +2,10 @@
 
 window.addEventListener('load', () => {
     const loader = document.getElementById('load');
-    setTimeout(() => {
-        loader.style.display = 'none';
-    }, 500); 
+    // setTimeout(() => {
+    //     loader.style.display = 'none';
+    // }, 500); 
+    loader.style.display = 'none';
     console.log('Page is fully loaded :)');
 });
 

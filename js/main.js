@@ -1,3 +1,13 @@
+//----------------- LOADING SCREEN -----------------//
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('load');
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 500); 
+    console.log('Page is fully loaded :)');
+});
+
 //----------------- CUSTOM HTML -----------------//
 
 class SpecialHeader extends HTMLElement {

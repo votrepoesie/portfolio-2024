@@ -21,6 +21,7 @@ body {
     font-family: "Inter", sans-serif;
     background-color: black;
     overflow-x: hidden;
+    /* cursor: url(../images/mouse.png), auto; */
 }
 
 h1 {
@@ -30,6 +31,12 @@ h1 {
 .secondary-highlight {
     color: var(--secondary-color);
 }
+
+.jersey-25-regular {
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
 
 /* //////////////////NAV/////////////////// */
 
@@ -42,7 +49,8 @@ special-header {
 
 nav {
     border-bottom: 1px solid var(--main-color);
-    background: black;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 li {

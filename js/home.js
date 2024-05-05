@@ -23,24 +23,27 @@ anime({
 
 //----------------- FLOATING TEXT -----------------//
 
-
+// MAY TODOS:
 // what if only shows 6 divs each time??
+// is there a way for it to refresh position only when opacity is 0
 
-animateDescriptions();
+// animateDescriptions();
 setInterval(refreshPosition, 5000);
 
 function animateDescriptions() {
     let descriptions = [
         'multimedia artist',
-        'very fun to be around',
         'cilantro hater',
         'ENFJ-T',
         'cat mom',
-        'extroverted introvert',
         'paleontology nerd',
-        'sci-fi enthusiast',
         'art historian',
-        'world traveler'
+        'world traveler',
+        'botanist',
+        'goes to every zoo & aquarium',
+        'tattoos <3',
+        'A24 stan',
+        'listens to hyperpop & 60s ballads'
     ];
 
     createDivs(descriptions);
@@ -66,9 +69,9 @@ function createDivs(description) {
 
         //TODO!! listen for resize event, and the random placement is a little wack on mobile
         if (window.innerWidth < 800) {
-            div.style.fontSize = '18px';
+            div.style.fontSize = '15px';
         } else {
-            div.style.fontSize = '25px';
+            div.style.fontSize = '20px';
         }
         div.classList.add('description');
         div.innerText = description[i];

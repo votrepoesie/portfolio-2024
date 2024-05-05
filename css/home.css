@@ -30,10 +30,14 @@
     z-index: -1;
 }
 
+.my-journey {
+
+}
+
 .about {
     margin-top: 120px;
     margin-bottom: 60px;
-    padding: 50px 100px;
+    padding: 100px 200px;
     height: 600px;
     display: flex;
     flex-direction: row;
@@ -42,15 +46,20 @@
 }
 
 .about-img {
-    background: url(../images/about.png) no-repeat center center/cover;
-    width: 500px;
+    width: 38%;
     height: 100%;
-    border-radius: 32px;
+    transform: rotate(-2deg);
+}
+
+.about-img:hover {
+    transform: rotate(-5deg);
+    transition: 0.3s ease;
 }
 
 .about-text {
-    width: 500px;
+    width: 50%;
     height: 100%;
+    margin-left: 50px;
 }
 
 .about-title {
@@ -66,11 +75,15 @@
 }
 
 .about-link {
-    font-size: 20px;
     font-weight: 300;
     color: var(--main-color);
     text-decoration: underline;
     margin: 10px 0;
+}
+
+.about-link a {
+    color: var(--main-color);
+    font-size: 20px;
 }
 
 @media (max-width: 768px) {

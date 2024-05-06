@@ -113,5 +113,8 @@ function newPage(e) {
         case 'case3':
             window.location.href = 'museum.html';
             break;
+        case 'case4':
+            window.location.href = 'airport.html';
+            break;
     }
 }

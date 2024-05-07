@@ -23,12 +23,53 @@ anime({
 
 //----------------- FLOATING TEXT -----------------//
 
-// MAY TODOS:
-// what if only shows 6 divs each time??
-// is there a way for it to refresh position only when opacity is 0
+let activate = document.getElementById('activate');
+let activateText = document.getElementById('activate-text');
+let state = false;
 
-// animateDescriptions();
-setInterval(refreshPosition, 5000);
+animateDescriptions();
+
+let descriptions = document.querySelectorAll('.description');
+descriptions.forEach((description) => {
+    description.style.visibility = 'hidden';
+});
+
+activate.addEventListener('click', () => {
+    if (!state) {
+        descriptions.forEach((description) => {
+            description.style.visibility = 'visible';
+        });
+        refreshPosition();
+        state = true;
+        activateText.innerText = 'make it stop';
+    } else {
+        descriptions.forEach((description) => {
+            description.style.visibility = 'hidden';
+        });
+        state = false;
+        activateText.innerText = 'click me click me';
+    }
+});
+
+
+// activateFloatingText();
+
+// function activateFloatingText() {
+//     let activate = document.getElementById('activate');
+//     let state = 1;
+
+//     if (state == 1) {
+//         activate.addEventListener('click', () => {
+//             animateDescriptions();
+//             setInterval(refreshPosition, 5000);
+//         });
+//         state = 0;
+//         console.log(state);
+//     } else {
+//         console.log(state);
+//         state = 1;
+//     }
+// }
 
 function animateDescriptions() {
     let descriptions = [
@@ -95,7 +136,7 @@ function createDivs(description) {
             for (let j = 0; j < i; j++) {
                 if (positionsX1[i] >= positionsX2[j] && positionsX2[i] <= positionsX1[j]
                 && positionsY1[i] >= positionsY2[j] && positionsY2[i] <= positionsY1[j]) {
-                    console.log('overlap w/ other divs');
+                    // console.log('overlap w/ other divs');
                     div.style.visibility = 'hidden';
                 }
             }
@@ -113,7 +154,7 @@ function positionAdjust(div) {
 
     if (rect.left + rect.width >= heroRect.left && rect.left <= heroRect.left + heroRect.width
     && rect.top + rect.height >= heroRect.top && rect.top <= heroRect.top + heroRect.height) {
-        console.log('overlap w/ hero text');
+        // console.log('overlap w/ hero text');
         div.style.visibility = 'hidden';
     }
 
@@ -121,7 +162,7 @@ function positionAdjust(div) {
     let headerRect = header.getBoundingClientRect();
 
     if (rect.top + rect.height >= headerRect.top && rect.top <= headerRect.top + headerRect.height) {
-        console.log('overlap w/ header');
+        // console.log('overlap w/ header');
         div.style.top = 100 + Math.random() * 500 + 'px';
     }
 }

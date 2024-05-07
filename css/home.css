@@ -14,7 +14,7 @@
     font-size: 40px;
     color: var(--tertiary-color);
     margin-left: 40px;
-    margin-top: 40px;
+    margin-top: 60px;
     text-align: center;
     padding: 80px 120px;
     /* border: 1px solid var(--tertiary-color); */
@@ -23,6 +23,26 @@
 .hero-text h1 {
     background: black;
     z-index: 5;
+}
+
+#activate {
+    background: black;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 24px;
+}
+
+#activate h2 {
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 16px;
+}
+
+#activate:hover {
+    box-shadow: 5px 5px 0 var(--secondary-color);
+    transition: 0.3s ease;
 }
 
 #blob {

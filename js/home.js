@@ -1,3 +1,22 @@
+
+//----------------- FONT ANIMATION -----------------//
+
+heroFontChange();
+
+function heroFontChange() {
+    let fonts = ['Inter', 'Jersey 15', 'New Rocker', 'Monospace', 'Handlee', 'Verdana', 'Times New Roman', 'Brush Script MT'];
+    let target = document.getElementById('hero-text-title');
+    // cycle through fonts array
+    let i = 0;
+    setInterval(() => {
+        target.style.fontFamily = fonts[i];
+        i++;
+        if (i == fonts.length) {
+            i = 0;
+        }
+    }, 300);
+}
+
 //----------------- BLOB ANIMATION -----------------//
 
 const blob1 = document.getElementById('blob-1');
@@ -40,6 +59,7 @@ activate.addEventListener('click', () => {
             description.style.visibility = 'visible';
         });
         refreshPosition();
+        intervalId = setInterval(refreshPosition, 6000);
         state = true;
         activateText.innerText = 'make it stop';
     } else {
@@ -48,35 +68,18 @@ activate.addEventListener('click', () => {
         });
         state = false;
         activateText.innerText = 'click me click me';
+        clearInterval(intervalId);
     }
 });
-
-
-// activateFloatingText();
-
-// function activateFloatingText() {
-//     let activate = document.getElementById('activate');
-//     let state = 1;
-
-//     if (state == 1) {
-//         activate.addEventListener('click', () => {
-//             animateDescriptions();
-//             setInterval(refreshPosition, 5000);
-//         });
-//         state = 0;
-//         console.log(state);
-//     } else {
-//         console.log(state);
-//         state = 1;
-//     }
-// }
 
 function animateDescriptions() {
     let descriptions = [
         'multimedia artist',
         'cilantro hater',
         'ENFJ-T',
+        'creative chaos',
         'cat mom',
+        'maximalist',
         'paleontology nerd',
         'art historian',
         'world traveler',
@@ -100,6 +103,7 @@ function createDivs(description) {
     for (let i = 0; i < description.length; i++) {
         let container = document.querySelector('.hero');
         let div = document.createElement('div');
+        div.classList.add('description');
         container.appendChild(div);
 
         let colors = ['var(--secondary-color)', 'var(--tertiary-color)', 'var(--red)', 'var(--yellow)', 'var(--green)', 'var(--orange)'];
@@ -107,19 +111,30 @@ function createDivs(description) {
 
         div.style.position = 'absolute';
         div.style.color = randomColor;
+        div.style.fontFamily = 'Silkscreen';
+        div.style.fontWeight = 400;
+        div.style.fontSize = '20px';
+        div.style.width = '250px';
 
-        //TODO!! listen for resize event, and the random placement is a little wack on mobile
-        if (window.innerWidth < 800) {
-            div.style.fontSize = '15px';
-        } else {
-            div.style.fontSize = '20px';
+        // responsive web
+        if (window.innerWidth < 1300) {
+            div.style.fontSize = '19px';
+            div.style.width = '200px';
+        } else if (window.innerWidth < 1000) {
+            div.style.fontSize = '18px';
+            div.style.width = '120px';
+        } else if (window.innerWidth < 768) {
+            div.style.fontSize = '17px';
         }
+
+        // description class
         div.classList.add('description');
         div.innerText = description[i];
     
         animateDivs(div);
         positionAdjust(div);
 
+        // WACK-ASS OVERLAP PREVENTION ;-;
         // get div dimensions
         let right = div.getBoundingClientRect().right;
         let bottom = div.getBoundingClientRect().bottom;
@@ -136,7 +151,7 @@ function createDivs(description) {
             for (let j = 0; j < i; j++) {
                 if (positionsX1[i] >= positionsX2[j] && positionsX2[i] <= positionsX1[j]
                 && positionsY1[i] >= positionsY2[j] && positionsY2[i] <= positionsY1[j]) {
-                    // console.log('overlap w/ other divs');
+                    console.log('overlap w/ other divs');
                     div.style.visibility = 'hidden';
                 }
             }
@@ -213,4 +228,15 @@ function refreshPosition() {
             }
         }
     });
+}
+
+//----------------- MOBILE ADJUST -----------------//
+
+mobileContentAdjust();
+
+function mobileContentAdjust() {
+    if (window.innerWidth < 800) {
+        let hero = document.querySelector('.hero');
+        hero.style.display = 'none';
+    }
 }

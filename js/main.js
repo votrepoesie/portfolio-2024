@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     //     loader.style.display = 'none';
     // }, 500); 
     loader.style.display = 'none';
-    console.log('Page is fully loaded :)');
+    console.log('Page is ready to view :)');
 });
 
 //----------------- CUSTOM HTML -----------------//
@@ -20,10 +20,10 @@ class SpecialHeader extends HTMLElement {
                 <a href="index.html" class="nav-branding">vivian r. li</a>
                 
                 <ul class="nav-links">
-                    <li class="nav-item draw"><a href="draw.html">draw</a></li>
-                    <li class="nav-item design"><a href="design.html">design</a></li>
-                    <li class="nav-item code"><a href="code.html">code</a></li>
-                    <li class="nav-item make"><a href="make.html">make</a></li>
+                    <li class="nav-item draw"><a href="draw.html"></a></li>
+                    <li class="nav-item design"><a href="design.html"></a></li>
+                    <li class="nav-item code"><a href="code.html"></a></li>
+                    
                 </ul>
 
                 <div class="hamburger">
@@ -76,18 +76,15 @@ function changeHamburgerContent() {
     const draw = document.querySelector('.draw a');
     const design = document.querySelector('.design a');
     const code = document.querySelector('.code a');
-    const make = document.querySelector('.make a');
 
     if (screenWidth <= 768) {
         draw.textContent = 'draw';
         design.textContent = 'design';
         code.textContent = 'code';
-        make.textContent = 'make';
     } else {
         draw.textContent = 'I draw,';
         design.textContent = 'design,';
-        code.textContent = 'code,';
-        make.textContent = 'and make things.';
+        code.textContent = 'and sometimes code things.';
     }
 }
 

@@ -95,7 +95,7 @@ changeHamburgerContent();
 window.addEventListener('resize', changeHamburgerContent);
 
 
-//----------------- DIRECT TO SUBPAGE -----------------//
+//----------------- DESIGN - DIRECT TO SUBPAGE -----------------//
 
 function newPage(e) {
     let element = document.getElementById(e);
@@ -115,3 +115,33 @@ function newPage(e) {
             break;
     }
 }
+
+//----------------- CUSTOM CURSOR -----------------//
+// reference: https://codepen.io/tamm/pen/dyVvgx
+
+// const follower = document.getElementById('follower');
+
+// function mouseX(e) {
+//     return e.clientX;
+// }
+
+// function mouseY(e) {
+//     return e.clientY;
+// }
+
+// function positionElement(e) {
+//     const mouse = {
+//         x: mouseX(e),
+//         y: mouseY(e)
+//     };
+//     follower.style.left = mouse.x + 'px';
+//     follower.style.top = mouse.y + 'px';
+// }
+
+// let timer = false;
+// window.onmousemove = function initiate(e) {
+//     const _event = event;
+//     timer = setTimeout(function () {
+//         positionElement(_event);
+//     }, 1);
+// };

@@ -15,7 +15,8 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
-    cursor: url(../images/mouse.png), auto;
+    /* cursor: url(../images/mouse.png), auto;  */
+    /* cursor: none; */
 }
 
 body {
@@ -44,7 +45,7 @@ special-header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 999;
 }
 
 nav {
@@ -149,6 +150,62 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* //////////////////CURSOR/////////////////// */
+
+#follower {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#follower #circle1 {
+  position: absolute;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  background: var(--main-color);
+  border-radius: 50%;
+  height: 0em;
+  width: 0em;
+  margin-top: 0em;
+  margin-left: 0em;
+}
+
+#follower #circle2 {
+  position: absolute;
+  -webkit-animation: pulse 4s infinite;
+  animation: pulse 4s infinite;
+  background: var(--tertiary-color);
+  border-radius: 50%;
+  height: 0em;
+  width: 0em;
+  margin-top: 0em;
+  margin-left: 0em;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+    height: 1em;
+    width: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  50% {
+    opacity: 0.9;
+    height: 3em;
+    width: 3em;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+  }
+  100% {
+    opacity: 0.2;
+    height: 1em;
+    width: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
 }
 
 /* //////////////////MOBILE/////////////////// */

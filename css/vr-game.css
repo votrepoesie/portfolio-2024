@@ -1,3 +1,4 @@
 .hero {
     background: url(../images/case-study/persuasive-design/hero.gif);
+    background-size: cover;
 }

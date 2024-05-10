@@ -153,6 +153,9 @@ a {
     position: relative;
 }
 
+/* jumping text animation */
+/* reference: https://www.geeksforgeeks.org/how-to-create-jumping-text-3d-animation-effect-using-css/ */
+
 #load span:nth-child(2) {
     animation-delay: 0.1s;
 }

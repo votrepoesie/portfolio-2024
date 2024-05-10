@@ -4,11 +4,11 @@ document.querySelector('body').style.overflowY = 'hidden';
 
 window.addEventListener('load', () => {
     const loader = document.getElementById('load'); 
-    setTimeout(() => {
-        loader.style.display = 'none';
-    }, 1000);
+    // setTimeout(() => {
+    //     loader.style.display = 'none';
+    // }, 500);
+    loader.style.display = 'none';
     document.querySelector('body').style.overflowY = 'scroll';
-    console.log('page is ready to view!');
 });
 
 //----------------- CUSTOM HTML -----------------//

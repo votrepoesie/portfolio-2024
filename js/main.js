@@ -2,12 +2,14 @@
 
 document.querySelector('body').style.overflowY = 'hidden';
 
-// window.addEventListener('load', () => {
-//     const loader = document.getElementById('load'); 
-//     loader.style.display = 'none';
-//     console.log('Page is ready to view!');
-//     document.querySelector('body').style.overflowY = 'scroll';
-// });
+window.addEventListener('load', () => {
+    const loader = document.getElementById('load'); 
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 1000);
+    document.querySelector('body').style.overflowY = 'scroll';
+    console.log('page is ready to view!');
+});
 
 //----------------- CUSTOM HTML -----------------//
 

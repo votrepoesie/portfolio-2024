@@ -78,9 +78,9 @@ function changeHamburgerContent() {
     const code = document.querySelector('.code a');
 
     if (screenWidth <= 768) {
-        draw.textContent = 'draw';
-        design.textContent = 'design';
-        code.textContent = 'code';
+        draw.textContent = '* draw *';
+        design.textContent = '< design >';
+        code.textContent = '/ code /';
     } else {
         draw.textContent = 'I draw,';
         design.textContent = 'design,';

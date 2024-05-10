@@ -1,13 +1,13 @@
 //----------------- LOADING SCREEN -----------------//
 
-window.addEventListener('load', () => {
-    const loader = document.getElementById('load');
-    // setTimeout(() => {
-    //     loader.style.display = 'none';
-    // }, 500); 
-    loader.style.display = 'none';
-    console.log('Page is ready to view :)');
-});
+document.querySelector('body').style.overflowY = 'hidden';
+
+// window.addEventListener('load', () => {
+//     const loader = document.getElementById('load'); 
+//     loader.style.display = 'none';
+//     console.log('Page is ready to view!');
+//     document.querySelector('body').style.overflowY = 'scroll';
+// });
 
 //----------------- CUSTOM HTML -----------------//
 

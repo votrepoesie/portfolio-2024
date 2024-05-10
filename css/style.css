@@ -33,12 +33,6 @@ h1 {
     color: var(--secondary-color);
 }
 
-.jersey-25-regular {
-    font-family: "Jersey 25", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}  
-
 /* //////////////////NAV/////////////////// */
 
 special-header {
@@ -144,73 +138,71 @@ a {
 #load {
     width: 100%;
     height: 100vh;
-    font-size: 30px;
-    font-family: 'Silkscreen';
     background: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-/* //////////////////CURSOR/////////////////// */
-
-#follower {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+#load span {
+    color: var(--secondary-color);
+    font-family: 'Silkscreen';
+    font-size: 60px;
+    animation: bounce 0.5s ease infinite alternate;
+    position: relative;
 }
 
-#follower #circle1 {
-  position: absolute;
-  -webkit-animation: pulse 2s infinite;
-  animation: pulse 2s infinite;
-  background: var(--main-color);
-  border-radius: 50%;
-  height: 0em;
-  width: 0em;
-  margin-top: 0em;
-  margin-left: 0em;
+#load span:nth-child(2) {
+    animation-delay: 0.1s;
 }
 
-#follower #circle2 {
-  position: absolute;
-  -webkit-animation: pulse 4s infinite;
-  animation: pulse 4s infinite;
-  background: var(--tertiary-color);
-  border-radius: 50%;
-  height: 0em;
-  width: 0em;
-  margin-top: 0em;
-  margin-left: 0em;
+#load span:nth-child(3) {
+    animation-delay: 0.2s;
 }
 
-@keyframes pulse {
-  0% {
-    opacity: 0.2;
-    height: 1em;
-    width: 1em;
-    margin-top: -0.5em;
-    margin-left: -0.5em;
-  }
-  50% {
-    opacity: 0.9;
-    height: 3em;
-    width: 3em;
-    margin-top: -1.5em;
-    margin-left: -1.5em;
-  }
-  100% {
-    opacity: 0.2;
-    height: 1em;
-    width: 1em;
-    margin-top: -0.5em;
-    margin-left: -0.5em;
-  }
+#load span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+#load span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+#load span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+#load span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+#load span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+#load span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+#load span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+@keyframes bounce {
+    100% {
+        top: 10px;
+        color: var(--main-color);
+    }
 }
 
 /* //////////////////MOBILE/////////////////// */
 
 @media (max-width: 768px) {
+
+    #load span {
+        font-size: 30px;
+    }
 
     .navbar {
         background: rgba(0, 0, 0, 0.8);

@@ -44,8 +44,8 @@ special-header {
 
 nav {
     border-bottom: 1px solid var(--main-color);
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
 }
 
 li {
@@ -235,8 +235,7 @@ a {
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(5px);
         position: fixed;
-        height: 92vh;
-        padding: 150px 0;
+        padding: 30px 0;
         margin: 0;
         left: 100%;
         top: 70.5px;
@@ -246,6 +245,10 @@ a {
         text-align: center;
         transition: 0.3s;
         border-bottom: 1px solid var(--main-color);
+    }
+
+    .nav-item {
+        margin: 30px 0;
     }
 
     .nav-item a {

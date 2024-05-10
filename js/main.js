@@ -81,8 +81,8 @@ function changeHamburgerContent() {
 
     if (screenWidth <= 768) {
         draw.textContent = '* draw *';
-        design.textContent = '< design >';
-        code.textContent = '/ code /';
+        design.textContent = '/ design /';
+        code.textContent = '< code >';
     } else {
         draw.textContent = 'I draw,';
         design.textContent = 'design,';

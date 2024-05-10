@@ -28,7 +28,6 @@
 }
 
 .case-category {
-    color: white;
     background: black;
     font-size: 20px;
     height: 10%;
@@ -42,6 +41,11 @@
 
 .category-text {
     padding-top: 5px;
+}
+
+.category-text p {
+    font-size: 18px;
+    color: white;
 }
 
 .category-decor {
@@ -105,6 +109,14 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
+}
+
+.case-content1 .overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.case-content2 .overlay {
+    background: rgba(0, 0, 0, 0.7);
 }
 
 /* //////////////////MOBILE/////////////////// */

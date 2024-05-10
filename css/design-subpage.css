@@ -479,6 +479,10 @@ h3 {
         overflow-x: hidden;
     }
 
+    .navbar {
+        
+    }
+
     /* .directory {
         display: none;
     } */
@@ -504,7 +508,7 @@ h3 {
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     #tagline {
@@ -566,7 +570,7 @@ h3 {
     .research-and-ideation .img-container {
         flex-direction: column;
         height: auto;
-        margin: 10px 0;
+        margin: 16px 0;
     }
 
     .research-and-ideation .img {

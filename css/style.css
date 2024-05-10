@@ -212,6 +212,10 @@ a {
 
 @media (max-width: 768px) {
 
+    .navbar {
+        background: rgba(0, 0, 0, 0.8);;
+    }
+
     .nav-branding {
         margin: 0 8px;
     }

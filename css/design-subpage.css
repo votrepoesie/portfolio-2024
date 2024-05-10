@@ -571,7 +571,28 @@ h3 {
         margin: 5px 0;
     }
 
+    .problem .caption {
+        margin-bottom: 20px;
+    }
+
+    .findings {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    .ideation .body-text {
+        margin-bottom: 30px;
+    }
+
+    .ideation .img {
+        height: 230px;
+    }
+
     /* ////////////////////////////// */
+
+    .highlight {
+        font-size: 22px;
+    }
 
     .composition-1 {
         flex-direction: column;

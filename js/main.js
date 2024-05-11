@@ -25,7 +25,7 @@ class SpecialHeader extends HTMLElement {
                     <li class="nav-item draw"><a href="draw.html"></a></li>
                     <li class="nav-item design"><a href="design.html"></a></li>
                     <li class="nav-item code"><a href="code.html"></a></li>
-                    
+                    <li class="nav-item make"><a href="make.html"></a></li>
                 </ul>
 
                 <div class="hamburger">
@@ -78,15 +78,18 @@ function changeHamburgerContent() {
     const draw = document.querySelector('.draw a');
     const design = document.querySelector('.design a');
     const code = document.querySelector('.code a');
+    const make = document.querySelector('.make a');
 
     if (screenWidth <= 768) {
         draw.textContent = '* draw *';
         design.textContent = '/ design /';
         code.textContent = '< code >';
+        make.textContent = '+ make +';
     } else {
         draw.textContent = 'I draw,';
         design.textContent = 'design,';
-        code.textContent = 'and sometimes code things.';
+        code.textContent = 'code,';
+        make.textContent = 'and make things.';
     }
 }
 

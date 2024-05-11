@@ -1,5 +1,12 @@
 /* //////////////////HERO/////////////////// */
 
+.description {
+    display: flex;
+    width: auto;
+    margin: 0;
+    font-size: 20px;
+}
+
 .hero {
     margin-top: 70px;
     width: 100%;
@@ -116,9 +123,17 @@
     .about {
         padding: 100px 100px;
     }
+
+    .description {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 1000px) {
+    .description {
+        font-size: 16px;
+    }
+
     .about {
         padding: 100px 50px;
         height: 750px;
@@ -131,13 +146,37 @@
 
 @media (max-width: 768px) {
 
+    .description {
+        font-size: 14px;
+    }
+
+    .hero {
+        width: 100vw;
+    }
+    
+    .hero-text {
+        font-size: 30px;
+        padding: 0;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    #hero-text-title {
+        height: 150px;
+    }
+
+    #activate h2 {
+        font-size: 14px;
+    }
+
     .about {
         flex-direction: column;
         width: 100%;
         height: auto;
         padding: 0 30px;
         justify-content: center;
-        margin-top: 120px;
+        margin-top: 50px;
         margin-bottom: 80px;
     }
     
@@ -145,22 +184,23 @@
         margin-bottom: 50px;
         width: 95%;
         height: 300px;
+        box-shadow: -8px 8px 0 var(--main-color);
     }
 
     .about-text {
         width: 100%;
-        margin: 0;
+        margin: 20px 0;
     }
 
     .about-title {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .about-body {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-    .about-link {
-        font-size: 23px;
+    .about-link a {
+        font-size: 18px;
     }
 }

@@ -75,6 +75,7 @@ activate.addEventListener('click', () => {
 function animateDescriptions() {
     let descriptions = [
         'multimedia artist',
+        'determined',
         'cilantro hater',
         'ENFJ-T',
         'creative chaos',
@@ -84,23 +85,23 @@ function animateDescriptions() {
         'art historian',
         'world traveler',
         'botanist',
-        'goes to every zoo & aquarium',
+        'goes to every aquarium',
         'tattoos <3',
-        'A24 stan',
-        'listens to hyperpop & 60s ballads'
+        'adaptable',
+        'resilient'
     ];
 
     createDivs(descriptions);
 }
 
-function createDivs(description) {
+function createDivs(descriptions) {
 
     let positionsX1 = [];
     let positionsX2 = [];
     let positionsY1 = [];
     let positionsY2 = [];
 
-    for (let i = 0; i < description.length; i++) {
+    for (let i = 0; i < descriptions.length; i++) {
         let container = document.querySelector('.hero');
         let div = document.createElement('div');
         div.classList.add('description');
@@ -113,23 +114,11 @@ function createDivs(description) {
         div.style.color = randomColor;
         div.style.fontFamily = 'Silkscreen';
         div.style.fontWeight = 400;
-        div.style.fontSize = '20px';
-        div.style.width = '250px';
-
-        // responsive web
-        if (window.innerWidth < 1300) {
-            div.style.fontSize = '19px';
-            div.style.width = '200px';
-        } else if (window.innerWidth < 1000) {
-            div.style.fontSize = '18px';
-            div.style.width = '120px';
-        } else if (window.innerWidth < 768) {
-            div.style.fontSize = '17px';
-        }
+        div.style.width = 'auto';
 
         // description class
         div.classList.add('description');
-        div.innerText = description[i];
+        div.innerText = descriptions[i];
     
         animateDivs(div);
         positionAdjust(div);
@@ -160,16 +149,31 @@ function createDivs(description) {
 }
 
 function positionAdjust(div) {
-    div.style.left = Math.random() * 85 + '%';
-    div.style.top = Math.random() * 90 + '%';
 
+    div.style.left = (Math.random() * (85 - 5 + 1) + 5) + '%';
+    div.style.top = (Math.random() * (80 - 10 + 1) + 10) + '%';
+
+    if (window.innerWidth < 800) {
+        div.style.left = (Math.random() * (80 - 1 + 1) + 1) + '%';
+        div.style.top = (Math.random() * (90 - 10 + 1) + 10) + '%';
+    }
+
+    // div dimension
     let rect = div.getBoundingClientRect();
+
+    // hero text dimension
     let hero = document.getElementById('hero-text');
     let heroRect = hero.getBoundingClientRect();
+    
+    // debug
+    // console.log(rect);
+    // console.log(heroRect);
 
-    if (rect.left + rect.width >= heroRect.left && rect.left <= heroRect.left + heroRect.width
-    && rect.top + rect.height >= heroRect.top && rect.top <= heroRect.top + heroRect.height) {
-        // console.log('overlap w/ hero text');
+    // current issue: div position is absolute, so top has negative values
+    // collision detection occasionally fails due to this?? not sure
+
+    if (rect.left + rect.width >= heroRect.left && rect.left <= heroRect.left + heroRect.width && rect.top + rect.height >= heroRect.top && rect.top <= heroRect.top + heroRect.height) {
+        console.log( div + ' overlaps w/ hero text');
         div.style.visibility = 'hidden';
     }
 
@@ -178,7 +182,7 @@ function positionAdjust(div) {
 
     if (rect.top + rect.height >= headerRect.top && rect.top <= headerRect.top + headerRect.height) {
         // console.log('overlap w/ header');
-        div.style.top = 100 + Math.random() * 500 + 'px';
+        div.style.visibility = 'hidden';
     }
 }
 
@@ -236,7 +240,7 @@ mobileContentAdjust();
 
 function mobileContentAdjust() {
     if (window.innerWidth < 800) {
-        let hero = document.querySelector('.hero');
-        hero.style.display = 'none';
+        let blob = document.querySelector('#blob');
+        blob.style.display = 'none';
     }
 }

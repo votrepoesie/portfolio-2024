@@ -29,6 +29,11 @@ window.addEventListener('resize', resizeAll);
 
 gallery.querySelectorAll('.gallery-item').forEach(function (item) {
     item.addEventListener('click', function () {        
-        item.classList.toggle('full');        
+        item.classList.toggle('full');
+        if (item.classList.contains('full')) {
+            console.log('clicked');
+        } else {
+            console.log('unclicked');
+        }
     });
 });

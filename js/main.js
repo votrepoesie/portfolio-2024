@@ -1,9 +1,10 @@
 //----------------- LOADING SCREEN -----------------//
 
+
 document.querySelector('body').style.overflowY = 'hidden';
 
 window.addEventListener('load', () => {
-    const loader = document.getElementById('load'); 
+    const loader = document.getElementById('load');
     // setTimeout(() => {
     //     loader.style.display = 'none';
     // }, 500);

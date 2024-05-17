@@ -236,7 +236,7 @@ function refreshPosition() {
 
 //----------------- MOBILE ADJUST -----------------//
 
-// mobileContentAdjust();
+mobileContentAdjust();
 
 function mobileContentAdjust() {
     if (window.innerWidth < 800) {

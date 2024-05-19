@@ -199,6 +199,31 @@ a {
     }
 }
 
+/* //////////////////SWAL/////////////////// */
+/* documentation: https://sweetalert2.github.io/#configuration */
+
+.my-custom-container {
+    border: 1px solid var(--secondary-color) !important;
+}
+
+.my-custom-title {
+    color: var(--secondary-color) !important;
+}
+
+.my-custom-button {
+    color: var(--secondary-color) !important;
+    background: black !important;
+    font-family: 'Silkscreen' !important;
+    font-size: 18px !important;
+    padding: 8px 16px !important;
+    border: 1px solid var(--secondary-color) !important;
+    margin-bottom: 10px !important;
+}
+
+.my-custom-button:hover {
+    box-shadow: 5px 5px 0 var(--secondary-color) !important;
+}
+
 /* //////////////////MOBILE/////////////////// */
 
 @media (max-width: 768px) {

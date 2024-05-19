@@ -59,7 +59,7 @@
 
 .about {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     padding: 100px 200px;
     height: 600px;
     display: flex;
@@ -75,11 +75,13 @@
     background-size: cover;
     transform: rotate(-2deg);
     /* border: 1px solid var(--main-color); */
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: -10px 10px 0 var(--main-color);
 }
 
 .about-img:hover {
+    background: url(../images/about-colored.png);
+    background-size: cover;
     transform: rotate(-5deg);
     transition: 0.3s ease;
 }
@@ -107,18 +109,31 @@
 .about-links {
     display: flex;
     flex-direction: row;
+    justify-content: left;
 }
 
 .about-link {
     font-weight: 300;
     color: var(--main-color);
-    text-decoration: underline;
-    margin: 10px 30px 0 0;
+    margin-right: 32px;
+    margin-top: 24px;
 }
 
 .about-link a {
+    font-family: 'Silkscreen', monospace;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
     color: var(--main-color);
-    font-size: 20px;
+    font-size: 16px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.about-link a:hover {
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    box-shadow: 5px 5px 0 var(--secondary-color);
+    transition: 0.3s ease;
 }
 
 @media (max-width: 1300px) {

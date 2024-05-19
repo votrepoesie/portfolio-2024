@@ -111,13 +111,50 @@ function newPage(e) {
             window.location.href = 'vr-game.html';
             break;
         case 'case2':
-            window.location.href = 'chance-encounter.html';
+            // window.location.href = 'chance-encounter.html';
+            // Swal.fire("This one is under construction!");
+            Swal.fire({
+                icon: 'info',
+                iconColor: 'var(--secondary-color)',
+                background: 'black',
+                title: 'This one is under construction!',
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'my-custom-button',
+                    title: 'my-custom-title',
+                    popup: 'my-custom-container'
+                }
+            });
             break;
         case 'case3':
-            window.location.href = 'museum.html';
+            // window.location.href = 'museum.html';
+            Swal.fire({
+                icon: 'info',
+                iconColor: 'var(--secondary-color)',
+                background: 'black',
+                title: 'This one is under construction!',
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'my-custom-button',
+                    title: 'my-custom-title',
+                    popup: 'my-custom-container'
+                }
+            });
             break;
         case 'case4':
-            window.location.href = 'airport.html';
+            // window.location.href = 'airport.html';
+            Swal.fire({
+                icon: 'info',
+                iconColor: 'var(--secondary-color)',
+                background: 'black',
+                title: 'This one is under construction!',
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'my-custom-button',
+                    title: 'my-custom-title',
+                    popup: 'my-custom-container'
+                }
+            });
             break;
     }
 }

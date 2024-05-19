@@ -1,32 +1,57 @@
-// if hovers, text & other element change color 
+//----------------- DIRECT TO SUBPAGE -----------------//
 
-const case1 = document.getElementById('case1');
-const case2 = document.getElementById('case2');
-const case3 = document.getElementById('case3');
-const case4 = document.getElementById('case4');
-
-case1.addEventListener('mouseenter', () => {
-    console.log('Mouse entered the element');
-    const text = document.getElementById('case-title1');
-    const decor = document.querySelectorAll('.button1');
-    const line = document.querySelector('.case-category1');
-    console.log(decor);
-    text.style.color = 'var(--secondary-color)';
-    decor.forEach((element) => {
-        element.style.border = '1px solid var(--secondary-color)';
-    });
-    line.style.borderBottom = '1px solid var(--secondary-color)';
-});
-
-case1.addEventListener('mouseleave', () => {
-    console.log('Mouse left the element');
-    const text = document.getElementById('case-title1');
-    const decor = document.querySelectorAll('.button1');
-    const line = document.querySelector('.case-category1');
-    console.log(decor);
-    text.style.color = 'var(--main-color)';
-    decor.forEach((element) => {
-        element.style.border = '1px solid var(--main-color)';
-    });
-    line.style.borderBottom = '1px solid var(--main-color)';
-});
+function newPage(e) {
+    let element = document.getElementById(e);
+    let id = element.id;
+    switch (id) {
+        case 'case1':
+            window.location.href = 'vr-game.html';
+            break;
+        case 'case2':
+            // window.location.href = 'chance-encounter.html';
+            // Swal.fire("This one is under construction!");
+            Swal.fire({
+                icon: 'info',
+                iconColor: 'var(--secondary-color)',
+                background: 'black',
+                title: 'This one is under construction!',
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'my-custom-button',
+                    title: 'my-custom-title',
+                    popup: 'my-custom-container'
+                }
+            });
+            break;
+        case 'case3':
+            // window.location.href = 'museum.html';
+            Swal.fire({
+                icon: 'info',
+                iconColor: 'var(--secondary-color)',
+                background: 'black',
+                title: 'This one is under construction!',
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'my-custom-button',
+                    title: 'my-custom-title',
+                    popup: 'my-custom-container'
+                }
+            });
+            break;
+        case 'case4':
+            // window.location.href = 'airport.html';
+            Swal.fire({
+                icon: 'info',
+                iconColor: 'var(--secondary-color)',
+                background: 'black',
+                title: 'This one is under construction!',
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'my-custom-button',
+                    title: 'my-custom-title',
+                    popup: 'my-custom-container'
+                }
+            });
+            break;
+    }
+}

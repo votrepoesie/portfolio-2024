@@ -225,7 +225,11 @@
         font-size: 18px;
     }
 
+    .about-link {
+        margin-right: 16px;
+    }
+
     .about-link a {
-        font-size: 18px;
+        font-size: 15px;
     }
 }

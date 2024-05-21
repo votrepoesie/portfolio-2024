@@ -75,7 +75,6 @@ activate.addEventListener('click', () => {
 function animateDescriptions() {
     let descriptions = [
         'multimedia artist',
-        'determined',
         'cilantro hater',
         'ENFJ-T',
         'creative chaos',
@@ -84,11 +83,12 @@ function animateDescriptions() {
         'paleontology nerd',
         'art historian',
         'world traveler',
-        'botanist',
-        'goes to every aquarium',
-        'tattoos <3',
+        'houseplant lover',
+        'aquarium fanatic',
         'adaptable',
-        'resilient'
+        'resilient',
+        'humorous',
+        'radical optimist'
     ];
 
     createDivs(descriptions);

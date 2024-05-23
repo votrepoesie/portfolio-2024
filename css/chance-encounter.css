@@ -1,0 +1,26 @@
+.hero {
+    background: url(../images/case-study/chance-encounter/splash-3-large.png);
+    background-size: cover;
+}
+
+.section ol {
+    margin-left: 36px;
+}
+
+.section ol li {
+    list-style-type: decimal;
+}
+
+.findings .img-1 {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.findings .img-2 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.findings .caption {
+    text-align: center;
+}

@@ -13,3 +13,5 @@ function adjustDivHeight() {
     //set height of div2
     div2.style.height = divHeight + 'px';
 }
+
+

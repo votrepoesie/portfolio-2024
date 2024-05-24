@@ -24,3 +24,38 @@
 .findings .caption {
     text-align: center;
 }
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-need img {
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.user-need .caption {
+    text-align: center;
+}
+
+.reframing img {
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.meet-cute img {
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.meet-cute .caption {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 40px;
+}

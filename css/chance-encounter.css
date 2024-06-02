@@ -59,3 +59,28 @@
     width: 75%;
     margin-bottom: 40px;
 }
+
+.design-process .highlight {
+    margin: 10px 0;
+}
+
+.design-process .demo-video {
+    margin-top: 50px;
+}
+
+.design-process .demo-video .caption {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.interactions img {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.gamification img {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0;
+}

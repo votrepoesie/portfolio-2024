@@ -8,20 +8,7 @@ function newPage(e) {
             window.location.href = 'vr-game.html';
             break;
         case 'case2':
-            // window.location.href = 'chance-encounter.html';
-            // Swal.fire("This one is under construction!");
-            Swal.fire({
-                icon: 'info',
-                iconColor: 'var(--secondary-color)',
-                background: 'black',
-                title: 'This one is under construction!',
-                confirmButtonText: 'OK',
-                customClass: {
-                    confirmButton: 'my-custom-button',
-                    title: 'my-custom-title',
-                    popup: 'my-custom-container'
-                }
-            });
+            window.location.href = 'chance-encounter.html';
             break;
         case 'case3':
             // window.location.href = 'museum.html';

@@ -71,7 +71,7 @@ a {
     align-items: center;
     margin: 5px 40px 0 40px;
     font-weight: 500;
-    gap: 6px;
+    gap: 40px;
 }
 
 .nav-branding {
@@ -88,10 +88,8 @@ a {
 }
 
 .nav-item > a {
-    /* font-family: 'Silkscreen'; */
-    /* font-weight: 400; */
+    font-family: 'Silkscreen';
     color: var(--main-color);
-    /* text-decoration: underline; */
 }
 
 .nav-item > a:hover {
@@ -269,7 +267,6 @@ a {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        /* border-bottom: 1px solid var(--main-color); */
     }
 
     .nav-item {

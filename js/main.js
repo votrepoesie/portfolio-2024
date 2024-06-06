@@ -87,10 +87,10 @@ function changeHamburgerContent() {
         code.textContent = '< code >';
         make.textContent = '+ make +';
     } else {
-        draw.textContent = 'I draw,';
-        design.textContent = 'design,';
-        code.textContent = 'code,';
-        make.textContent = 'and make things.';
+        draw.textContent = '* draw *';
+        design.textContent = '/ design /';
+        code.textContent = '< code >';
+        make.textContent = '+ make +';
     }
 }
 
@@ -99,6 +99,7 @@ changeHamburgerContent();
 
 //when page is resized
 window.addEventListener('resize', changeHamburgerContent);
+
 
 //----------------- CUSTOM CURSOR -----------------//
 // reference: https://codepen.io/tamm/pen/dyVvgx

@@ -1,4 +1,10 @@
 
+// pre-load images
+document.addEventListener("DOMContentLoaded", function() {
+    var img = new Image();
+    img.src = "../images/about-colored.png";
+});
+
 //----------------- FONT ANIMATION -----------------//
 
 heroFontChange();

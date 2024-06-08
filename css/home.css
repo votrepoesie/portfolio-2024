@@ -79,6 +79,18 @@
     box-shadow: -10px 10px 0 var(--main-color);
 }
 
+/* pre-load hover img */
+.about-img::before {
+    content: "";
+    background: url(../images/about-colored.png);
+    background-size: cover;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 0;
+    height: 0;
+}
+
 .about-img:hover {
     background: url(../images/about-colored.png);
     background-size: cover;

@@ -78,7 +78,13 @@
 }
 
 .case-content4 {
-    background: black;
+    background: url(../images/case-study/airport/cover.png);
+    background-size: cover;
+}
+
+.case-content5 {
+    background: url(../images/case-study/graphic-design/designer-profile.png);
+    background-size: cover;
 }
 
 .case-content {
@@ -116,6 +122,10 @@
 }
 
 .case-content2 .overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.case-content5 .overlay {
     background: rgba(0, 0, 0, 0.7);
 }
 

@@ -2030,22 +2030,22 @@
 
 .case-content1 {
     /* background: black; */
-    background: url(../images/make/) no-repeat center center/cover;
+    background: url(../images/make/fashion/bettye\ 1.JPG) no-repeat center center/cover;
 }
 
 .case-content2 {
     /* background: black; */
-    background: url(../images/make/) no-repeat center center/cover;
+    background: url(../images/make/animation/EMDR-cover.png) no-repeat center center/cover;
 }
 
 .case-content3 {
     /* background: black; */
-    background: url(../images/make/) no-repeat center center/cover;
+    background: url(../images/make/animation/mushroom.png) no-repeat center center/cover;
 }
 
 .case-content4 {
     /* background: black; */
-    background: url(../images/make/) no-repeat center center/cover;
+    background: url(../images/make/garden-cover.png) no-repeat center center/cover;
 }
 
 .case-content {
@@ -2078,7 +2078,11 @@
     position: absolute;
 }
 
-.case-content4 .overlay {
+.case-content2 .overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.case-content3 .overlay {
     background: rgba(0, 0, 0, 0.7);
 }
 

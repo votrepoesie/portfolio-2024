@@ -10,6 +10,9 @@ function newPage(e) {
         case 'case2':
             window.location.href = 'chance-encounter.html';
             break;
+        case 'case5':
+            window.location.href = 'visual-design.html';
+            break;
         case 'case3':
             // window.location.href = 'museum.html';
             Swal.fire({

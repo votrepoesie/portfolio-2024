@@ -437,6 +437,61 @@ h3 {
     margin: 10px 0;
 }
 
+/* ///////////////////// VISUAL DESIGN PAGE ////////////////////// */
+
+.button {
+    display: flex;
+    padding-top: 30px;
+}
+
+.button a {
+    font-size: 15px;
+    font-family: 'Silkscreen', monospace;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.button a:hover {
+    box-shadow: 5px 5px 0 var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.visual-design .img-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.visual-design .img-container img {
+    width: 49.5%;
+}
+
+.img-container-splash {
+    margin: 30px 0;
+}
+
+.img-container-splash img {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.img-container-moda-bifold {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-container-moda-bifold .arjun {
+    width: 55%;
+}
+
+.img-container-moda-bifold .otis {
+    width: 44%;
+}
+
 /* ///////////////////// RESPONSIVE ////////////////////// */
 
 @media (max-width: 1300px) {
@@ -650,5 +705,11 @@ h3 {
         width: 100%;
         height: 250px;
         margin: 16px 0;
+    }
+
+    /* visual design page */
+
+    .visual-design .img-container {
+        flex-direction: column;
     }
 }

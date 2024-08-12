@@ -479,17 +479,31 @@ h3 {
     width: 100%;
 }
 
-.img-container-moda-bifold {
+.img-container-bifold {
     display: flex;
     justify-content: space-between;
 }
 
-.img-container-moda-bifold .arjun {
+.img-container-bifold .arjun {
     width: 55%;
 }
 
-.img-container-moda-bifold .otis {
+.img-container-bifold .otis {
     width: 44%;
+}
+
+.img-container-bifold .ifk {
+    width: 49.5%;
+}
+
+.ifk .caption {
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 48px;
+}
+
+.fashion .caption {
+    text-align: center;
 }
 
 /* ///////////////////// RESPONSIVE ////////////////////// */
@@ -711,5 +725,10 @@ h3 {
 
     .visual-design .img-container {
         flex-direction: column;
+    }
+
+    .visual-design .img-container img {
+        width: 100%;
+        margin: 4px 0;
     }
 }
